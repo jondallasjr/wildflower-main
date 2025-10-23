@@ -1,237 +1,334 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Our Work — Brand Design Case Studies</title><style>/* Our Work — Brand Design Case Studies - Page CSS */
-.work-hero {
-  padding: 5rem 2rem;
-  text-align: center;
-  background: linear-gradient(135deg, rgba(255, 182, 193, 0.1) 0%, rgba(221, 160, 221, 0.1) 100%);
-  margin-bottom: 4rem;
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Wildflower Studio — Brand Design for Conscious Businesses</title><style>/* Wildflower Studio — Brand Design for Conscious Businesses - Page CSS */
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  padding: 6rem 2rem;
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
 }
 
-.work-hero-content h1 {
+.hero-content {
+  z-index: 2;
+}
+
+.hero-title {
   font-size: clamp(2.5rem, 8vw, 4rem);
-  margin-bottom: 1.5rem;
   font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
   color: #1a1a1a;
+  letter-spacing: -0.02em;
 }
 
-.work-hero-subtitle {
+.hero-subtitle {
   font-size: 1.25rem;
   line-height: 1.6;
+  margin-bottom: 2.5rem;
   color: #555;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 500px;
 }
 
-.work-grid-container {
-  padding: 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
-  margin-bottom: 4rem;
-}
-
-.work-case-study {
+.hero-cta {
   display: flex;
-  flex-direction: column;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.work-case-study:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-.case-study-visual {
-  width: 100%;
-  height: 280px;
-  background: linear-gradient(135deg, #ffd700 0%, #ff69b4 50%, #daa0dd 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
+.btn {
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.case-study-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #ffd700 0%, #ff69b4 50%, #daa0dd 100%);
-}
-
-.case-study-content {
-  padding: 2rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.case-study-category {
-  display: inline-block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #ff69b4;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-}
-
-.case-study-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-  color: #1a1a1a;
-  font-weight: 700;
-}
-
-.case-study-content p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #666;
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
-}
-
-.case-study-link {
-  color: #ff69b4;
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-  align-self: flex-start;
-}
-
-.case-study-link:hover {
-  color: #ff1493;
-}
-
-.work-cta-section {
-  padding: 4rem 2rem;
-  text-align: center;
-  background: linear-gradient(135deg, #fff5e1 0%, #ffe4e1 100%);
-  margin-top: 3rem;
-}
-
-.work-cta-content h2 {
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
-  margin-bottom: 1rem;
-  color: #1a1a1a;
-  font-weight: 700;
-}
-
-.work-cta-content p {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-button {
   display: inline-block;
-  padding: 1rem 2.5rem;
-  background: #ff69b4;
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: background 0.3s ease, transform 0.3s ease;
-  border: 2px solid #ff69b4;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  cursor: pointer;
 }
 
-.cta-button:hover {
-  background: #ff1493;
-  border-color: #ff1493;
+.btn-primary {
+  background: #2d5016;
+  color: #fff;
+  border-color: #2d5016;
+}
+
+.btn-primary:hover {
+  background: #1f3a0f;
+  border-color: #1f3a0f;
   transform: translateY(-2px);
 }
 
+.btn-secondary {
+  background: transparent;
+  color: #2d5016;
+  border-color: #2d5016;
+}
+
+.btn-secondary:hover {
+  background: #2d5016;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-large {
+  padding: 1.25rem 3rem;
+  font-size: 1.125rem;
+}
+
+.hero-visual {
+  position: relative;
+  height: 500px;
+}
+
+.hero-accent {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.hero-accent-1 {
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(135deg, #f4e4d7 0%, #ffe5cc 100%);
+  top: -50px;
+  right: -100px;
+  z-index: 1;
+}
+
+.hero-accent-2 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #d4f1d4 0%, #e8f5e9 100%);
+  bottom: 50px;
+  right: 50px;
+  z-index: 1;
+}
+
+.hero-accent-3 {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #ffe4e1 0%, #ffd7cc 100%);
+  bottom: 200px;
+  left: 20px;
+  z-index: 1;
+}
+
+/* Principles Section */
+.principles {
+  padding: 5rem 2rem;
+  background: #f9f7f4;
+}
+
+.principles h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.principle-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.principle-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.principle-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #2d5016;
+}
+
+.principle-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 5rem 2rem;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial {
+  padding: 2rem;
+  background: #f9f7f4;
+  border-left: 4px solid #2d5016;
+  border-radius: 0.5rem;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.testimonial-author {
+  color: #888;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #2d5016 0%, #3d6b1f 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.cta-section p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+/* Utility */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .work-hero {
-    padding: 3rem 1.5rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .work-grid {
+  .hero {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    padding: 4rem 1.5rem;
+    min-height: auto;
   }
 
-  .work-cta-section {
-    padding: 2.5rem 1.5rem;
+  .hero-visual {
+    display: none;
   }
-}</style></head><body><section class="work-hero">
-  <div class="work-hero-content">
-    <h1>Our Work</h1>
-    <p class="work-hero-subtitle">Bold brand identities for purpose-driven businesses. Each project is a collaboration that celebrates vision, values, and visual courage.</p>
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .principles h2,
+  .testimonials h2 {
+    font-size: 2rem;
+  }
+
+  .principle-card {
+    padding: 1.5rem;
+  }
+}</style></head><body><section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Brand Design for Conscious Businesses</h1>
+    <p class="hero-subtitle">We cultivate bold, human-centered identities for startups, nonprofits, and purpose-driven brands that refuse to blend in.</p>
+    <div class="hero-cta">
+      <a href="/wildflower-main/work" class="btn btn-primary">Explore Our Work</a>
+      <a href="/wildflower-main/process" class="btn btn-secondary">Our Process</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-accent hero-accent-1"></div>
+    <div class="hero-accent hero-accent-2"></div>
+    <div class="hero-accent hero-accent-3"></div>
   </div>
 </section>
 
-<section class="work-grid-container">
-  <div class="work-grid">
-    <article class="work-case-study" data-category="branding">
-      <div class="case-study-visual">
-        <div class="case-study-placeholder">Case Study 1</div>
+<section class="principles">
+  <div class="section-container">
+    <h2>How We Work</h2>
+    <div class="principles-grid">
+      <div class="principle-card">
+        <h3>Human-Centered Always</h3>
+        <p>Design serves people, not egos. We create for real humans with real needs.</p>
       </div>
-      <div class="case-study-content">
-        <span class="case-study-category">Brand Identity</span>
-        <h3>Project Name</h3>
-        <p>Brief description of the project, the challenge, and our bold approach to solving it.</p>
-        <a href="/wildflower-main/work/case-study-1" class="case-study-link">View Case Study →</a>
+      <div class="principle-card">
+        <h3>Bold Over Safe</h3>
+        <p>We encourage clients to take creative risks. Playing it safe means blending in.</p>
       </div>
-    </article>
-
-    <article class="work-case-study" data-category="branding">
-      <div class="case-study-visual">
-        <div class="case-study-placeholder">Case Study 2</div>
+      <div class="principle-card">
+        <h3>Collaboration is Key</h3>
+        <p>Our best work happens in partnership. We're allergic to "client vs. agency" dynamics.</p>
       </div>
-      <div class="case-study-content">
-        <span class="case-study-category">Brand Identity</span>
-        <h3>Project Name</h3>
-        <p>Brief description of the project, the challenge, and our bold approach to solving it.</p>
-        <a href="/wildflower-main/work/case-study-2" class="case-study-link">View Case Study →</a>
+      <div class="principle-card">
+        <h3>Purpose Matters</h3>
+        <p>We work exclusively with mission-driven organizations. If you're only here for profit, we're not your studio.</p>
       </div>
-    </article>
-
-    <article class="work-case-study" data-category="branding">
-      <div class="case-study-visual">
-        <div class="case-study-placeholder">Case Study 3</div>
+      <div class="principle-card">
+        <h3>Process Over Perfection</h3>
+        <p>Creative exploration is messy. We embrace it. Iteration reveals brilliance.</p>
       </div>
-      <div class="case-study-content">
-        <span class="case-study-category">Brand Identity</span>
-        <h3>Project Name</h3>
-        <p>Brief description of the project, the challenge, and our bold approach to solving it.</p>
-        <a href="/wildflower-main/work/case-study-3" class="case-study-link">View Case Study →</a>
-      </div>
-    </article>
-
-    <article class="work-case-study" data-category="branding">
-      <div class="case-study-visual">
-        <div class="case-study-placeholder">Case Study 4</div>
-      </div>
-      <div class="case-study-content">
-        <span class="case-study-category">Brand Identity</span>
-        <h3>Project Name</h3>
-        <p>Brief description of the project, the challenge, and our bold approach to solving it.</p>
-        <a href="/wildflower-main/work/case-study-4" class="case-study-link">View Case Study →</a>
-      </div>
-    </article>
+    </div>
   </div>
 </section>
 
-<section class="work-cta-section">
-  <div class="work-cta-content">
-    <h2>Ready to create something bold together?</h2>
-    <p>Let's explore how Wildflower can bring your brand vision to life.</p>
-    <a href="/wildflower-main/contact" class="cta-button">Start a Conversation</a>
+<section class="testimonials">
+  <div class="section-container">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <p class="testimonial-text">"Wildflower transformed our brand from 'fine' to 'unforgettable.' They captured our mission better than we could articulate it ourselves."</p>
+        <p class="testimonial-author">— Sarah Chen, Founder, Moonlight Wellness</p>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">"Working with this team felt like having creative partners, not vendors. They challenged us in the best ways."</p>
+        <p class="testimonial-author">— Marcus Johnson, CEO, Bright Future Initiative</p>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">"Bold, thoughtful, and refreshingly human. The opposite of every design agency we'd worked with before."</p>
+        <p class="testimonial-author">— Patricia Okonkwo, Director, Green Cities Alliance</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="section-container">
+    <h2>Ready to Grow Your Brand?</h2>
+    <p>Let's collaborate on something bold and purposeful.</p>
+    <a href="/wildflower-main/contact" class="btn btn-primary btn-large">Start a Conversation</a>
   </div>
 </section></body></html>
