@@ -1,482 +1,1875 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>[Client Name] — Brand Identity Redesign</title><style>/* Our Work — Brand Design Case Studies - Page CSS */
-.work-hero {
-  padding: 5rem 2rem;
-  text-align: center;
-  background: linear-gradient(135deg, rgba(255, 182, 193, 0.1) 0%, rgba(221, 160, 221, 0.1) 100%);
-  margin-bottom: 4rem;
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>[Client Name] — Brand Identity Redesign</title><style>/* Global CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.work-hero-content h1 {
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  margin-bottom: 1.5rem;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #1a1a1a;
+  background: white;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: #d4845c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #c0723f;
+}
+
+/* Header Styles */
+.site-header {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
   font-weight: 700;
   color: #1a1a1a;
+  display: flex;
+  align-items: center;
 }
 
-.work-hero-subtitle {
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: #555;
-  max-width: 600px;
+.logo-text {
+  background: linear-gradient(135deg, #d4845c 0%, #c8d5b7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 6px;
+  padding: 8px;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: #1a1a1a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Navigation Styles */
+.site-nav {
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-container {
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
-.work-grid-container {
-  padding: 2rem;
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+  height: 60px;
+}
+
+.nav-list a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #d4845c;
+  transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after {
+  width: 100%;
+}
+
+/* Footer Styles */
+.site-footer {
+  background: #1a1a1a;
+  color: #e0e0e0;
+  padding: 60px 40px 20px;
+  margin-top: 100px;
+}
+
+.footer-container {
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.work-grid {
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #999;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  font-size: 14px;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #d4845c;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 16px 24px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-bottom: none;
+  }
+
+  .site-nav.active {
+    max-height: 300px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-container {
+    padding: 20px 24px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 16px;
+    height: auto;
+  }
+
+  .nav-list a::after {
+    display: none;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 12px 16px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .nav-container {
+    padding: 16px;
+  }
+
+  .site-footer {
+    padding: 40px 16px 16px;
+  }
+}
+/* Our Work — Brand Design Case Studies - Page CSS */
+.work-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.work-hero {
+  padding: 100px 0 60px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 56px;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.case-studies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
-  margin-bottom: 4rem;
+  gap: 40px;
+  margin: 80px 0;
 }
 
-.work-case-study {
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  border-radius: 12px;
+.case-study-card {
+  background: white;
+  border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.work-case-study:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-.case-study-visual {
-  width: 100%;
-  height: 280px;
-  background: linear-gradient(135deg, #ffd700 0%, #ff69b4 50%, #daa0dd 100%);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.case-study-placeholder {
-  width: 100%;
+  flex-direction: column;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #ffd700 0%, #ff69b4 50%, #daa0dd 100%);
 }
 
-.case-study-content {
-  padding: 2rem;
+.case-study-card:hover {
+  border-color: #d4845c;
+  box-shadow: 0 12px 32px rgba(212, 132, 92, 0.12);
+  transform: translateY(-4px);
+}
+
+.card-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.placeholder-image {
+  display: block;
+}
+
+.card-content {
+  padding: 32px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.case-study-category {
-  display: inline-block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #ff69b4;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-}
-
-.case-study-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+.card-content h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
   color: #1a1a1a;
-  font-weight: 700;
 }
 
-.case-study-content p {
-  font-size: 1rem;
-  line-height: 1.6;
+.card-category {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #d4845c;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.card-description {
+  font-size: 15px;
   color: #666;
-  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
   flex-grow: 1;
 }
 
-.case-study-link {
-  color: #ff69b4;
-  text-decoration: none;
+.card-link {
+  font-size: 14px;
   font-weight: 600;
-  transition: color 0.3s ease;
-  align-self: flex-start;
+  color: #d4845c;
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  transition: all 0.3s ease;
 }
 
-.case-study-link:hover {
-  color: #ff1493;
+.card-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #d4845c;
+  transition: width 0.3s ease;
 }
 
-.work-cta-section {
-  padding: 4rem 2rem;
+.card-link:hover::after {
+  width: 100%;
+}
+
+.work-cta {
+  background: linear-gradient(135deg, #f4d8c4 0%, #e8f0dd 100%);
+  padding: 80px 40px;
   text-align: center;
-  background: linear-gradient(135deg, #fff5e1 0%, #ffe4e1 100%);
-  margin-top: 3rem;
+  border-radius: 12px;
+  margin: 80px 0;
 }
 
-.work-cta-content h2 {
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
-  margin-bottom: 1rem;
+.cta-content h2 {
+  font-size: 42px;
+  margin-bottom: 16px;
   color: #1a1a1a;
-  font-weight: 700;
 }
 
-.work-cta-content p {
-  font-size: 1.1rem;
+.cta-content p {
+  font-size: 18px;
   color: #666;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 40px;
 }
 
 .cta-button {
   display: inline-block;
-  padding: 1rem 2.5rem;
-  background: #ff69b4;
+  padding: 16px 42px;
+  background: #d4845c;
   color: white;
-  text-decoration: none;
-  border-radius: 50px;
   font-weight: 600;
-  transition: background 0.3s ease, transform 0.3s ease;
-  border: 2px solid #ff69b4;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 .cta-button:hover {
-  background: #ff1493;
-  border-color: #ff1493;
+  background: #c0723f;
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 132, 92, 0.3);
 }
 
 @media (max-width: 768px) {
+  .work-page {
+    padding: 0 24px;
+  }
+
   .work-hero {
-    padding: 3rem 1.5rem;
-    margin-bottom: 2.5rem;
+    padding: 60px 0 40px;
   }
 
-  .work-grid {
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .case-studies-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 32px;
+    margin: 60px 0;
   }
 
-  .work-cta-section {
-    padding: 2.5rem 1.5rem;
+  .card-content {
+    padding: 24px;
+  }
+
+  .work-cta {
+    padding: 60px 24px;
+    margin: 60px 0;
+  }
+
+  .cta-content h2 {
+    font-size: 32px;
+  }
+
+  .cta-content p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-page {
+    padding: 0 16px;
+  }
+
+  .work-hero {
+    padding: 40px 0 32px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
+  .case-studies-grid {
+    gap: 24px;
+    margin: 48px 0;
+  }
+
+  .card-image {
+    height: 200px;
+  }
+
+  .card-content h3 {
+    font-size: 18px;
+  }
+
+  .work-cta {
+    padding: 48px 16px;
+    margin: 48px 0;
+  }
+
+  .cta-content h2 {
+    font-size: 24px;
   }
 }
 
 /* [Client Name] — Brand Identity Redesign - Page CSS */
-.case-study-hero {
-  padding: 5rem 2rem;
-  text-align: center;
-  background: linear-gradient(135deg, rgba(255, 182, 193, 0.15) 0%, rgba(221, 160, 221, 0.15) 100%);
-  margin-bottom: 4rem;
-}
-
-.case-study-hero-content h1 {
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  color: #1a1a1a;
-}
-
-.case-study-subtitle {
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: #ff69b4;
-  font-weight: 600;
+.case-study-page {
+  background: white;
 }
 
 .case-study-container {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 4rem;
   max-width: 1200px;
-  margin: 0 auto 4rem;
-  padding: 2rem;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
-.case-study-article {
-  flex-grow: 1;
+/* Hero Section */
+.case-study-hero {
+  padding: 80px 0 60px;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-.case-study-section {
-  margin-bottom: 3.5rem;
+.hero-header {
+  max-width: 900px;
+  margin-bottom: 40px;
 }
 
-.case-study-section h2 {
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
-  margin-bottom: 1.25rem;
+.hero-category {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #d4845c;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: 52px;
+  font-weight: 700;
   color: #1a1a1a;
-  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  letter-spacing: -1px;
 }
 
-.case-study-section p {
-  font-size: 1.05rem;
+.hero-subtitle {
+  font-size: 18px;
+  color: #666;
   line-height: 1.8;
-  color: #555;
-  margin-bottom: 1.25rem;
+  max-width: 700px;
 }
 
-.case-study-highlight {
-  padding: 2rem;
-  background: linear-gradient(135deg, rgba(255, 217, 0, 0.1) 0%, rgba(255, 105, 180, 0.1) 100%);
-  border-left: 4px solid #ff69b4;
-  border-radius: 8px;
-  margin: 2rem 0;
-}
-
-.case-study-highlight p {
-  margin-bottom: 0;
-}
-
-.case-study-visual-section {
-  margin: 3rem 0;
-}
-
-.case-study-image-placeholder {
-  width: 100%;
-  height: 400px;
-  background: linear-gradient(135deg, #ffd700 0%, #ff69b4 50%, #daa0dd 100%);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-.case-study-results-list {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0;
-}
-
-.case-study-results-list li {
-  padding: 0.75rem 0 0.75rem 2rem;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #555;
-  position: relative;
-}
-
-.case-study-results-list li:before {
-  content: "→";
-  position: absolute;
-  left: 0;
-  color: #ff69b4;
-  font-weight: 700;
-}
-
-.case-study-testimonial {
-  padding: 2.5rem;
-  background: linear-gradient(135deg, rgba(255, 182, 193, 0.15) 0%, rgba(221, 160, 221, 0.1) 100%);
-  border-radius: 12px;
-  margin: 3rem 0;
-}
-
-.case-study-testimonial blockquote {
-  margin: 0;
-}
-
-.case-study-testimonial p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #333;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  font-style: italic;
-}
-
-.case-study-testimonial footer {
-  font-size: 0.95rem;
-  color: #ff69b4;
-  font-weight: 600;
-  margin-top: 1rem;
-}
-
-.case-study-sidebar {
-  height: fit-content;
-  position: sticky;
-  top: 2rem;
-}
-
-.case-study-meta {
-  background: #f9f9f9;
-  padding: 2rem;
-  border-radius: 12px;
-  border: 1px solid #f0f0f0;
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #f0f0f0;
 }
 
 .meta-item {
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.meta-item:last-child {
-  margin-bottom: 0;
-}
-
-.meta-item h4 {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #ff69b4;
+.meta-label {
+  font-size: 12px;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #999;
+  letter-spacing: 0.5px;
 }
 
-.meta-item p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #333;
+.meta-value {
+  font-size: 16px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Hero Image */
+.case-study-hero-image {
+  padding: 60px 0;
+}
+
+.hero-image-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Content Section */
+.case-study-content {
+  padding: 100px 0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+.sidebar-section {
+  margin-bottom: 48px;
+}
+
+.sidebar-section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.sidebar-section p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-top: 0;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.content-section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+.content-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.strategic-list li,
+.results-list li {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  padding-left: 28px;
+  position: relative;
+}
+
+.strategic-list li::before,
+.results-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #d4845c;
+  font-weight: 700;
+}
+
+/* Image Layouts */
+.image-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin: 32px 0;
+}
+
+.grid-image {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+.grid-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-fullwidth {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f8f8;
+  margin: 32px 0;
+}
+
+.image-fullwidth img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Testimonial */
+.testimonial-section {
+  margin-top: 40px;
+}
+
+.testimonial {
+  background: linear-gradient(135deg, #f4d8c4 0%, #e8f0dd 100%);
+  padding: 48px;
+  border-radius: 8px;
+  border-left: 4px solid #d4845c;
+  font-size: 0;
+}
+
+.testimonial p {
+  font-size: 20px;
+  font-style: italic;
+  color: #1a1a1a;
+  line-height: 1.8;
   margin: 0;
 }
 
-.case-study-cta {
-  padding: 4rem 2rem;
-  text-align: center;
-  background: linear-gradient(135deg, #fff5e1 0%, #ffe4e1 100%);
-  margin-top: 3rem;
-}
-
-.case-study-cta-content h2 {
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
-  margin-bottom: 1rem;
-  color: #1a1a1a;
-  font-weight: 700;
-}
-
-.case-study-cta-content p {
-  font-size: 1.1rem;
+.testimonial-credit {
+  display: block;
+  font-size: 14px;
   color: #666;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 24px;
 }
 
+/* CTA Section */
+.case-study-cta {
+  padding: 100px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, #f4d8c4 0%, #e8f0dd 100%);
+  padding: 80px 60px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.cta-box h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.cta-box p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 16px 48px;
+  background: #d4845c;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #d4845c;
+}
+
+.cta-button:hover {
+  background: #c0723f;
+  border-color: #c0723f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 132, 92, 0.3);
+}
+
+/* Related Work */
+.related-work {
+  padding: 100px 0;
+}
+
+.related-work h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 60px;
+  line-height: 1.3;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.related-card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.related-card:hover {
+  transform: translateY(-8px);
+}
+
+.related-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #f8f8f8;
+  border-radius: 8px 8px 0 0;
+}
+
+.related-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.related-card:hover .related-image img {
+  transform: scale(1.05);
+}
+
+.related-info {
+  padding: 32px;
+  border: 1px solid #f0f0f0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.related-category {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #d4845c;
+  letter-spacing: 0.5px;
+}
+
+.related-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.related-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #d4845c;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.related-link::after {
+  content: ' →';
+  margin-left: 4px;
+  transition: margin-left 0.3s ease;
+}
+
+.related-link:hover::after {
+  margin-left: 8px;
+}
+
+/* Responsive */
 @media (max-width: 1024px) {
-  .case-study-container {
+  .content-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 60px;
   }
 
-  .case-study-sidebar {
+  .sidebar {
     position: static;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .sidebar-section {
+    margin-bottom: 0;
   }
 }
 
 @media (max-width: 768px) {
-  .case-study-hero {
-    padding: 3rem 1.5rem;
-    margin-bottom: 2.5rem;
-  }
-
   .case-study-container {
-    padding: 1.5rem;
-    margin-bottom: 2.5rem;
+    padding: 0 24px;
   }
 
-  .case-study-section {
-    margin-bottom: 2.5rem;
+  .case-study-hero {
+    padding: 60px 0 40px;
   }
 
-  .case-study-image-placeholder {
-    height: 250px;
+  .hero-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding-top: 32px;
+  }
+
+  .case-study-hero-image {
+    padding: 40px 0;
+  }
+
+  .case-study-content {
+    padding: 60px 0;
+  }
+
+  .sidebar {
+    grid-template-columns: 1fr;
+    margin-bottom: 40px;
+  }
+
+  .main-content {
+    gap: 48px;
+  }
+
+  .content-section h2 {
+    font-size: 28px;
+  }
+
+  .content-section p {
+    font-size: 15px;
+  }
+
+  .image-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .testimonial {
+    padding: 32px;
+  }
+
+  .testimonial p {
+    font-size: 18px;
   }
 
   .case-study-cta {
-    padding: 2.5rem 1.5rem;
+    padding: 60px 0;
   }
-}</style></head><body><section class="case-study-hero">
-  <div class="case-study-hero-content">
-    <h1>[Client Name]</h1>
-    <p class="case-study-subtitle">Brand Identity Redesign</p>
+
+  .cta-box {
+    padding: 60px 32px;
+  }
+
+  .cta-box h2 {
+    font-size: 32px;
+  }
+
+  .cta-box p {
+    font-size: 16px;
+  }
+
+  .related-work {
+    padding: 60px 0;
+  }
+
+  .related-work h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-study-container {
+    padding: 0 16px;
+  }
+
+  .case-study-hero {
+    padding: 40px 0 32px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
+  .hero-meta {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 24px;
+  }
+
+  .case-study-hero-image {
+    padding: 32px 0;
+  }
+
+  .case-study-content {
+    padding: 48px 0;
+  }
+
+  .main-content {
+    gap: 40px;
+  }
+
+  .content-section h2 {
+    font-size: 24px;
+  }
+
+  .content-section p {
+    font-size: 15px;
+  }
+
+  .testimonial {
+    padding: 24px;
+  }
+
+  .testimonial p {
+    font-size: 16px;
+  }
+
+  .case-study-cta {
+    padding: 48px 0;
+  }
+
+  .cta-box {
+    padding: 48px 24px;
+  }
+
+  .cta-box h2 {
+    font-size: 24px;
+  }
+
+  .cta-button {
+    padding: 14px 32px;
+    font-size: 15px;
+  }
+
+  .related-work {
+    padding: 48px 0;
+  }
+
+  .related-work h2 {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .related-info {
+    padding: 24px;
+  }
+
+  .related-info h3 {
+    font-size: 18px;
+  }
+}
+.case-study-page {
+  background: white;
+}
+
+.case-study-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Hero Section */
+.case-study-hero {
+  padding: 80px 0 60px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.hero-header {
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+.hero-category {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #d4845c;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: 52px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #999;
+  letter-spacing: 0.5px;
+}
+
+.meta-value {
+  font-size: 16px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Hero Image */
+.case-study-hero-image {
+  padding: 60px 0;
+}
+
+.hero-image-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Content Section */
+.case-study-content {
+  padding: 100px 0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+.sidebar-section {
+  margin-bottom: 48px;
+}
+
+.sidebar-section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.sidebar-section p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-top: 0;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.content-section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+.content-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.strategic-list li,
+.results-list li {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  padding-left: 28px;
+  position: relative;
+}
+
+.strategic-list li::before,
+.results-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #d4845c;
+  font-weight: 700;
+}
+
+/* Image Layouts */
+.image-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin: 32px 0;
+}
+
+.grid-image {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+.grid-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-fullwidth {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f8f8;
+  margin: 32px 0;
+}
+
+.image-fullwidth img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Testimonial */
+.testimonial-section {
+  margin-top: 40px;
+}
+
+.testimonial {
+  background: linear-gradient(135deg, #f4d8c4 0%, #e8f0dd 100%);
+  padding: 48px;
+  border-radius: 8px;
+  border-left: 4px solid #d4845c;
+  font-size: 0;
+}
+
+.testimonial p {
+  font-size: 20px;
+  font-style: italic;
+  color: #1a1a1a;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.testimonial-credit {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 24px;
+}
+
+/* CTA Section */
+.case-study-cta {
+  padding: 100px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, #f4d8c4 0%, #e8f0dd 100%);
+  padding: 80px 60px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.cta-box h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.cta-box p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 16px 48px;
+  background: #d4845c;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #d4845c;
+}
+
+.cta-button:hover {
+  background: #c0723f;
+  border-color: #c0723f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 132, 92, 0.3);
+}
+
+/* Related Work */
+.related-work {
+  padding: 100px 0;
+}
+
+.related-work h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 60px;
+  line-height: 1.3;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.related-card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.related-card:hover {
+  transform: translateY(-8px);
+}
+
+.related-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #f8f8f8;
+  border-radius: 8px 8px 0 0;
+}
+
+.related-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.related-card:hover .related-image img {
+  transform: scale(1.05);
+}
+
+.related-info {
+  padding: 32px;
+  border: 1px solid #f0f0f0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.related-category {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #d4845c;
+  letter-spacing: 0.5px;
+}
+
+.related-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.related-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #d4845c;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.related-link::after {
+  content: ' →';
+  margin-left: 4px;
+  transition: margin-left 0.3s ease;
+}
+
+.related-link:hover::after {
+  margin-left: 8px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .sidebar-section {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-study-container {
+    padding: 0 24px;
+  }
+
+  .case-study-hero {
+    padding: 60px 0 40px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding-top: 32px;
+  }
+
+  .case-study-hero-image {
+    padding: 40px 0;
+  }
+
+  .case-study-content {
+    padding: 60px 0;
+  }
+
+  .sidebar {
+    grid-template-columns: 1fr;
+    margin-bottom: 40px;
+  }
+
+  .main-content {
+    gap: 48px;
+  }
+
+  .content-section h2 {
+    font-size: 28px;
+  }
+
+  .content-section p {
+    font-size: 15px;
+  }
+
+  .image-grid-2col {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .testimonial {
+    padding: 32px;
+  }
+
+  .testimonial p {
+    font-size: 18px;
+  }
+
+  .case-study-cta {
+    padding: 60px 0;
+  }
+
+  .cta-box {
+    padding: 60px 32px;
+  }
+
+  .cta-box h2 {
+    font-size: 32px;
+  }
+
+  .cta-box p {
+    font-size: 16px;
+  }
+
+  .related-work {
+    padding: 60px 0;
+  }
+
+  .related-work h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-study-container {
+    padding: 0 16px;
+  }
+
+  .case-study-hero {
+    padding: 40px 0 32px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
+  .hero-meta {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 24px;
+  }
+
+  .case-study-hero-image {
+    padding: 32px 0;
+  }
+
+  .case-study-content {
+    padding: 48px 0;
+  }
+
+  .main-content {
+    gap: 40px;
+  }
+
+  .content-section h2 {
+    font-size: 24px;
+  }
+
+  .content-section p {
+    font-size: 15px;
+  }
+
+  .testimonial {
+    padding: 24px;
+  }
+
+  .testimonial p {
+    font-size: 16px;
+  }
+
+  .case-study-cta {
+    padding: 48px 0;
+  }
+
+  .cta-box {
+    padding: 48px 24px;
+  }
+
+  .cta-box h2 {
+    font-size: 24px;
+  }
+
+  .cta-button {
+    padding: 14px 32px;
+    font-size: 15px;
+  }
+
+  .related-work {
+    padding: 48px 0;
+  }
+
+  .related-work h2 {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .related-info {
+    padding: 24px;
+  }
+
+  .related-info h3 {
+    font-size: 18px;
+  }
+}
+</style></head><body><header class="site-header">
+  <div class="header-container">
+    <a href="/wildflower-main/" class="logo">
+      <span class="logo-text">Wildflower Studio</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
-</section>
-
-<div class="case-study-container">
-  <article class="case-study-article">
-    <section class="case-study-section">
-      <h2>The Challenge</h2>
-      <p>Describe the initial challenge, market positioning, and why a rebrand was necessary. What was the client's mission, and how did their existing brand fall short of communicating it?</p>
-    </section>
-
-    <section class="case-study-section">
-      <h2>Our Approach</h2>
-      <p>Walk through the strategic discovery process. What questions did we ask? What insights emerged? How did we collaborate with the client to define the visual direction?</p>
-      <div class="case-study-highlight">
-        <p><strong>Key Insight:</strong> Include a pivotal discovery or realization that shaped the creative direction.</p>
+</header><nav class="site-nav" id="siteNav">
+  <div class="nav-container">
+    <ul class="nav-list">
+      <li><a href="/wildflower-main/work">Work</a></li>
+      <li><a href="/wildflower-main/process">Process</a></li>
+      <li><a href="/wildflower-main/services">Services</a></li>
+      <li><a href="/wildflower-main/journal">Journal</a></li>
+      <li><a href="/wildflower-main/about">About</a></li>
+      <li><a href="/wildflower-main/contact">Contact</a></li>
+    </ul>
+  </div>
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    navToggle.addEventListener('click', function() {
+      siteNav.classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</nav><div class="case-study-page">
+  <section class="case-study-hero">
+    <div class="case-study-container">
+      <div class="hero-header">
+        <span class="hero-category">Case Study</span>
+        <h1 class="hero-title">[Client Name] — Brand Identity Redesign</h1>
+        <p class="hero-subtitle">A purposeful brand transformation for a mission-driven organization. Discover how we crafted a visual language that resonates authentically with their audience and amplifies their impact.</p>
       </div>
-    </section>
-
-    <section class="case-study-section">
-      <h2>Creative Direction</h2>
-      <p>Describe the visual system, color palette, typography, and design philosophy. Explain the bold choices made and why they authentically represent the brand.</p>
-    </section>
-
-    <section class="case-study-section case-study-visual-section">
-      <div class="case-study-image-placeholder">
-        <span>Visual assets go here</span>
-      </div>
-    </section>
-
-    <section class="case-study-section">
-      <h2>The Results</h2>
-      <p>Share measurable outcomes: increased engagement, media coverage, client feedback, or cultural impact. Include specific client testimonial if available.</p>
-      <ul class="case-study-results-list">
-        <li>Specific metric or achievement</li>
-        <li>Client feedback or recognition</li>
-        <li>Business or mission impact</li>
-      </ul>
-    </section>
-
-    <section class="case-study-section case-study-testimonial">
-      <blockquote>
-        <p>"Include a powerful client quote here that speaks to the transformation and partnership."</p>
-        <footer>— Client Name, Title, Organization</footer>
-      </blockquote>
-    </section>
-
-    <section class="case-study-section">
-      <h2>Key Takeaways</h2>
-      <p>Reflect on what made this project meaningful. What did we learn? How does this work exemplify Wildflower's approach to bold, human-centered design?</p>
-    </section>
-  </article>
-
-  <aside class="case-study-sidebar">
-    <div class="case-study-meta">
-      <div class="meta-item">
-        <h4>Client</h4>
-        <p>[Client Name]</p>
-      </div>
-      <div class="meta-item">
-        <h4>Services</h4>
-        <p>Brand Identity, Logo Design, Visual System</p>
-      </div>
-      <div class="meta-item">
-        <h4>Year</h4>
-        <p>2024</p>
-      </div>
-      <div class="meta-item">
-        <h4>Industry</h4>
-        <p>[Industry/Sector]</p>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <span class="meta-label">Client</span>
+          <span class="meta-value">[Client Name]</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Services</span>
+          <span class="meta-value">Brand Strategy, Visual Identity, Guidelines</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Year</span>
+          <span class="meta-value">2024</span>
+        </div>
       </div>
     </div>
-  </aside>
-</div>
+  </section>
 
-<section class="case-study-cta">
-  <div class="case-study-cta-content">
-    <h2>Ready to Make Your Brand Unforgettable?</h2>
-    <p>Let's collaborate on a brand identity that's as bold and purposeful as your mission.</p>
-    <a href="/wildflower-main/contact" class="cta-button">Start a Conversation</a>
+  <section class="case-study-hero-image">
+    <div class="case-study-container">
+      <div class="hero-image-wrapper">
+        <img src="/wildflower-main/images/case-study-hero.jpg" alt="[Client Name] Brand Identity" class="hero-image" />
+      </div>
+    </div>
+  </section>
+
+  <section class="case-study-content">
+    <div class="case-study-container">
+      <div class="content-grid">
+        <aside class="sidebar">
+          <div class="sidebar-section">
+            <h3>The Challenge</h3>
+            <p>Their existing brand didn't reflect the bold, mission-driven work they were doing. It felt corporate and disconnected from their authentic purpose.</p>
+          </div>
+          <div class="sidebar-section">
+            <h3>Our Approach</h3>
+            <p>We dove deep into their story, values, and community. Through collaborative workshops and creative exploration, we uncovered the heart of their brand.</p>
+          </div>
+          <div class="sidebar-section">
+            <h3>The Result</h3>
+            <p>A vibrant, human-centered identity that captures their mission and resonates with their audience. Bold typography, unexpected color combinations, and purposeful design.</p>
+          </div>
+        </aside>
+
+        <main class="main-content">
+          <div class="content-section">
+            <h2>The Journey</h2>
+            <p>Every great brand starts with understanding. We spent time with the [Client Name] team, learning their story, their values, and their vision for the future. What emerged was clear: their brand needed to be as bold and purposeful as their work.</p>
+            <p>We challenged them to take creative risks. To move beyond safe, conventional choices. The result is a brand identity that stands out, resonates authentically, and serves their mission.</p>
+          </div>
+
+          <div class="content-section">
+            <h2>Strategic Foundation</h2>
+            <p>Before we designed a single pixel, we established a strong strategic foundation:</p>
+            <ul class="strategic-list">
+              <li><strong>Brand Positioning:</strong> How they fit in the market and what makes them unique</li>
+              <li><strong>Core Values:</strong> The principles that guide every decision</li>
+              <li><strong>Visual Language:</strong> Color, typography, and imagery that tell their story</li>
+              <li><strong>Brand Voice:</strong> How they communicate, authentically and consistently</li>
+            </ul>
+          </div>
+
+          <div class="content-section">
+            <div class="image-grid-2col">
+              <div class="grid-image">
+                <img src="/wildflower-main/images/case-study-1.jpg" alt="Brand identity application" />
+              </div>
+              <div class="grid-image">
+                <img src="/wildflower-main/images/case-study-2.jpg" alt="Visual system development" />
+              </div>
+            </div>
+          </div>
+
+          <div class="content-section">
+            <h2>Visual Identity System</h2>
+            <p>We developed a comprehensive visual system that works across all touchpoints—digital, print, environmental. Every element serves a purpose and reinforces their brand narrative.</p>
+          </div>
+
+          <div class="content-section">
+            <div class="image-fullwidth">
+              <img src="/wildflower-main/images/case-study-system.jpg" alt="Complete brand system" />
+            </div>
+          </div>
+
+          <div class="content-section">
+            <h2>Impact & Results</h2>
+            <p>The new brand identity exceeded expectations:</p>
+            <ul class="results-list">
+              <li>25% increase in website engagement and time-on-site</li>
+              <li>Stronger brand recognition among target audiences</li>
+              <li>Authentic representation of their mission and values</li>
+              <li>Foundation for confident, consistent communication</li>
+            </ul>
+          </div>
+
+          <div class="content-section testimonial-section">
+            <blockquote class="testimonial">
+              <p>"Wildflower transformed our brand from 'fine' to 'unforgettable.' They captured our mission better than we could articulate it ourselves."</p>
+              <footer class="testimonial-credit">— Sarah Chen, Founder, [Client Name]</footer>
+            </blockquote>
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-study-cta">
+    <div class="case-study-container">
+      <div class="cta-box">
+        <h2>Ready to Transform Your Brand?</h2>
+        <p>Let's create something bold and purposeful together.</p>
+        <a href="/wildflower-main/contact" class="cta-button">Start a Conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="related-work">
+    <div class="case-study-container">
+      <h2>Other Projects</h2>
+      <div class="related-grid">
+        <div class="related-card">
+          <div class="related-image">
+            <img src="/wildflower-main/images/related-1.jpg" alt="Related project" />
+          </div>
+          <div class="related-info">
+            <span class="related-category">Brand Identity</span>
+            <h3>Another Bold Brand</h3>
+            <a href="/wildflower-main/work/case-study-related-1" class="related-link">View Case Study</a>
+          </div>
+        </div>
+        <div class="related-card">
+          <div class="related-image">
+            <img src="/wildflower-main/images/related-2.jpg" alt="Related project" />
+          </div>
+          <div class="related-info">
+            <span class="related-category">Visual System</span>
+            <h3>Creative Collaboration</h3>
+            <a href="/wildflower-main/work/case-study-related-2" class="related-link">View Case Study</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Wildflower Studio</h4>
+        <p>Bold, human-centered brand design for conscious businesses.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="/wildflower-main/work">Work</a></li>
+          <li><a href="/wildflower-main/process">Process</a></li>
+          <li><a href="/wildflower-main/services">Services</a></li>
+          <li><a href="/wildflower-main/journal">Journal</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/wildflower-main/about">About</a></li>
+          <li><a href="/wildflower-main/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Wildflower Studio. All rights reserved.</p>
+    </div>
   </div>
-</section></body></html>
+</footer></body></html>
