@@ -1,0 +1,1356 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Our Process — How We Create Bold Brands</title><style>/* Global CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #1a1a1a;
+  background: white;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: #d4845c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #c0723f;
+}
+
+/* Header Styles */
+.site-header {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  background: linear-gradient(135deg, #d4845c 0%, #c8d5b7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 6px;
+  padding: 8px;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: #1a1a1a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Navigation Styles */
+.site-nav {
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+  height: 60px;
+}
+
+.nav-list a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #d4845c;
+  transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after {
+  width: 100%;
+}
+
+/* Footer Styles */
+.site-footer {
+  background: #1a1a1a;
+  color: #e0e0e0;
+  padding: 60px 40px 20px;
+  margin-top: 100px;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #999;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  font-size: 14px;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #d4845c;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 16px 24px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-bottom: none;
+  }
+
+  .site-nav.active {
+    max-height: 300px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-container {
+    padding: 20px 24px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 16px;
+    height: auto;
+  }
+
+  .nav-list a::after {
+    display: none;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 12px 16px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .nav-container {
+    padding: 16px;
+  }
+
+  .site-footer {
+    padding: 40px 16px 16px;
+  }
+}
+/* Our Process — How We Create Bold Brands - Page CSS */
+.process-main {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Hero Section */
+.process-hero {
+  background: linear-gradient(135deg, #f5e8d9 0%, #e8f0e3 100%);
+  padding: 100px 40px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Intro Section */
+.process-intro {
+  padding: 80px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.intro-text h2 {
+  font-size: 36px;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.intro-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.intro-text p em {
+  color: #d4845c;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.principles-box {
+  background: #faf8f3;
+  padding: 40px;
+  border-radius: 8px;
+  border-left: 4px solid #d4845c;
+}
+
+.principles-box h3 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.principles-list {
+  list-style: none;
+}
+
+.principles-list li {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.principles-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.principles-list strong {
+  color: #d4845c;
+  font-weight: 700;
+}
+
+/* Stages Section */
+.process-stages {
+  padding: 100px 0;
+  background: white;
+}
+
+.process-stages h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #1a1a1a;
+}
+
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.stage-card {
+  background: white;
+  border: 1px solid #f0f0f0;
+  padding: 40px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stage-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #d4845c, #c8d5b7, #d4845c);
+}
+
+.stage-card:hover {
+  border-color: #d4845c;
+  box-shadow: 0 8px 24px rgba(212, 132, 92, 0.12);
+  transform: translateY(-4px);
+}
+
+.stage-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: #d4845c;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.stage-card h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.stage-card > p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  color: #555;
+}
+
+.stage-details {
+  list-style: none;
+  font-size: 14px;
+}
+
+.stage-details li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+  color: #666;
+  line-height: 1.6;
+}
+
+.stage-details li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #d4845c;
+  font-weight: bold;
+}
+
+/* Collaboration Section */
+.process-collaboration {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #faf8f3 0%, #f5e8d9 100%);
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.collab-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.collab-text h2 {
+  font-size: 36px;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.collab-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.collab-text em {
+  color: #d4845c;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.collab-highlight {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.collab-highlight blockquote {
+  font-size: 20px;
+  font-style: italic;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.quote-attr {
+  font-size: 14px;
+  color: #999;
+  font-style: italic;
+}
+
+/* Timeline Section */
+.process-timeline {
+  padding: 100px 0;
+  background: white;
+}
+
+.process-timeline h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #1a1a1a;
+}
+
+.timeline-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.timeline-item {
+  padding: 32px;
+  background: #faf8f3;
+  border-radius: 8px;
+  border-left: 4px solid #d4845c;
+}
+
+.timeline-item h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.timeline-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* CTA Section */
+.process-cta {
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #d4845c 0%, #c8d5b7 100%);
+  text-align: center;
+  border-radius: 8px;
+  margin: 80px 0;
+}
+
+.process-cta h2 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.process-cta p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 32px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 14px 40px;
+  background: white;
+  color: #d4845c;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.cta-button:hover {
+  background: #f5e8d9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .process-hero {
+    padding: 60px 24px;
+    margin-bottom: 60px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .process-intro {
+    padding: 60px 0;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .intro-text h2 {
+    font-size: 28px;
+  }
+
+  .process-stages {
+    padding: 60px 0;
+  }
+
+  .process-stages h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .stages-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .process-collaboration {
+    padding: 60px 0;
+  }
+
+  .collab-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .process-timeline {
+    padding: 60px 0;
+  }
+
+  .process-timeline h2 {
+    font-size: 28px;
+  }
+
+  .timeline-info {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .process-cta {
+    margin: 60px 0;
+    padding: 60px 24px;
+  }
+
+  .process-cta h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .process-hero {
+    padding: 40px 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .intro-text h2,
+  .process-stages h2,
+  .process-timeline h2,
+  .process-cta h2 {
+    font-size: 22px;
+  }
+
+  .stage-card {
+    padding: 24px;
+  }
+
+  .stage-number {
+    font-size: 36px;
+  }
+
+  .collab-highlight {
+    padding: 24px;
+  }
+
+  .collab-highlight blockquote {
+    font-size: 16px;
+  }
+
+  .timeline-item {
+    padding: 20px;
+  }
+
+  .process-cta {
+    padding: 40px 16px;
+  }
+}.process-main {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Hero Section */
+.process-hero {
+  background: linear-gradient(135deg, #f5e8d9 0%, #e8f0e3 100%);
+  padding: 100px 40px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Intro Section */
+.process-intro {
+  padding: 80px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.intro-text h2 {
+  font-size: 36px;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.intro-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.intro-text p em {
+  color: #d4845c;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.principles-box {
+  background: #faf8f3;
+  padding: 40px;
+  border-radius: 8px;
+  border-left: 4px solid #d4845c;
+}
+
+.principles-box h3 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.principles-list {
+  list-style: none;
+}
+
+.principles-list li {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.principles-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.principles-list strong {
+  color: #d4845c;
+  font-weight: 700;
+}
+
+/* Stages Section */
+.process-stages {
+  padding: 100px 0;
+  background: white;
+}
+
+.process-stages h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #1a1a1a;
+}
+
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.stage-card {
+  background: white;
+  border: 1px solid #f0f0f0;
+  padding: 40px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stage-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #d4845c, #c8d5b7, #d4845c);
+}
+
+.stage-card:hover {
+  border-color: #d4845c;
+  box-shadow: 0 8px 24px rgba(212, 132, 92, 0.12);
+  transform: translateY(-4px);
+}
+
+.stage-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: #d4845c;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.stage-card h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.stage-card > p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  color: #555;
+}
+
+.stage-details {
+  list-style: none;
+  font-size: 14px;
+}
+
+.stage-details li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+  color: #666;
+  line-height: 1.6;
+}
+
+.stage-details li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #d4845c;
+  font-weight: bold;
+}
+
+/* Collaboration Section */
+.process-collaboration {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #faf8f3 0%, #f5e8d9 100%);
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.collab-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.collab-text h2 {
+  font-size: 36px;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.collab-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.collab-text em {
+  color: #d4845c;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.collab-highlight {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.collab-highlight blockquote {
+  font-size: 20px;
+  font-style: italic;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.quote-attr {
+  font-size: 14px;
+  color: #999;
+  font-style: italic;
+}
+
+/* Timeline Section */
+.process-timeline {
+  padding: 100px 0;
+  background: white;
+}
+
+.process-timeline h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #1a1a1a;
+}
+
+.timeline-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.timeline-item {
+  padding: 32px;
+  background: #faf8f3;
+  border-radius: 8px;
+  border-left: 4px solid #d4845c;
+}
+
+.timeline-item h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.timeline-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* CTA Section */
+.process-cta {
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #d4845c 0%, #c8d5b7 100%);
+  text-align: center;
+  border-radius: 8px;
+  margin: 80px 0;
+}
+
+.process-cta h2 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.process-cta p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 32px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 14px 40px;
+  background: white;
+  color: #d4845c;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.cta-button:hover {
+  background: #f5e8d9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .process-hero {
+    padding: 60px 24px;
+    margin-bottom: 60px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .process-intro {
+    padding: 60px 0;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .intro-text h2 {
+    font-size: 28px;
+  }
+
+  .process-stages {
+    padding: 60px 0;
+  }
+
+  .process-stages h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .stages-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .process-collaboration {
+    padding: 60px 0;
+  }
+
+  .collab-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .process-timeline {
+    padding: 60px 0;
+  }
+
+  .process-timeline h2 {
+    font-size: 28px;
+  }
+
+  .timeline-info {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .process-cta {
+    margin: 60px 0;
+    padding: 60px 24px;
+  }
+
+  .process-cta h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .process-hero {
+    padding: 40px 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .intro-text h2,
+  .process-stages h2,
+  .process-timeline h2,
+  .process-cta h2 {
+    font-size: 22px;
+  }
+
+  .stage-card {
+    padding: 24px;
+  }
+
+  .stage-number {
+    font-size: 36px;
+  }
+
+  .collab-highlight {
+    padding: 24px;
+  }
+
+  .collab-highlight blockquote {
+    font-size: 16px;
+  }
+
+  .timeline-item {
+    padding: 20px;
+  }
+
+  .process-cta {
+    padding: 40px 16px;
+  }
+}</style></head><body><header class="site-header">
+  <div class="header-container">
+    <a href="/wildflower-main/" class="logo">
+      <span class="logo-text">Wildflower Studio</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header><nav class="site-nav" id="siteNav">
+  <div class="nav-container">
+    <ul class="nav-list">
+      <li><a href="/wildflower-main/work">Work</a></li>
+      <li><a href="/wildflower-main/process">Process</a></li>
+      <li><a href="/wildflower-main/services">Services</a></li>
+      <li><a href="/wildflower-main/journal">Journal</a></li>
+      <li><a href="/wildflower-main/about">About</a></li>
+      <li><a href="/wildflower-main/contact">Contact</a></li>
+    </ul>
+  </div>
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    navToggle.addEventListener('click', function() {
+      siteNav.classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</nav><main class="process-main">
+  <section class="process-hero">
+    <div class="hero-content">
+      <h1>How We Create Bold Brands</h1>
+      <p class="hero-subtitle">A transparent walkthrough of our collaborative design methodology, from discovery through launch.</p>
+    </div>
+  </section>
+
+  <section class="process-intro">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <h2>Our Design Philosophy</h2>
+          <p>We believe design should feel alive, not sterile. Every project is a garden we're cultivating: we plant seeds through research, nurture growth through iteration, and celebrate the bloom at launch. Messiness is part of the process. Perfection is overrated. Boldness is encouraged.</p>
+          <p>We work with clients who want to be <em>seen</em>, not just noticed—brands that aren't afraid to take up space and make a statement.</p>
+        </div>
+        <div class="principles-box">
+          <h3>Our Guiding Principles</h3>
+          <ul class="principles-list">
+            <li><strong>Human-Centered Always</strong> Design serves people, not egos.</li>
+            <li><strong>Bold Over Safe</strong> We encourage creative risks.</li>
+            <li><strong>Collaboration is Key</strong> Partnership, not client vs. agency.</li>
+            <li><strong>Purpose Matters</strong> We work with mission-driven organizations.</li>
+            <li><strong>Process Over Perfection</strong> Creative exploration is messy.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-stages">
+    <div class="container">
+      <h2>Our Five-Stage Process</h2>
+      <div class="stages-grid">
+        <div class="stage-card stage-1">
+          <div class="stage-number">01</div>
+          <h3>Discovery & Strategy</h3>
+          <p>We dive deep into understanding your mission, audience, and competitive landscape. Through workshops, interviews, and research, we uncover the story only you can tell.</p>
+          <ul class="stage-details">
+            <li>Brand workshops & stakeholder interviews</li>
+            <li>Market & competitor analysis</li>
+            <li>Audience research & personas</li>
+            <li>Brand positioning framework</li>
+          </ul>
+        </div>
+
+        <div class="stage-card stage-2">
+          <div class="stage-number">02</div>
+          <h3>Conceptual Exploration</h3>
+          <p>This is where the magic happens. We explore multiple creative directions, pushing boundaries and testing bold ideas. Mood boards, sketches, and rapid prototyping help us find your brand's visual language.</p>
+          <ul class="stage-details">
+            <li>Creative concepting & mood boards</li>
+            <li>Visual direction exploration</li>
+            <li>Multiple concept presentations</li>
+            <li>Collaborative feedback & refinement</li>
+          </ul>
+        </div>
+
+        <div class="stage-card stage-3">
+          <div class="stage-number">03</div>
+          <h3>Design Development</h3>
+          <p>We bring the chosen concept to life with precision. Logo design, color palette development, typography selection, and comprehensive brand guidelines ensure consistency across every touchpoint.</p>
+          <ul class="stage-details">
+            <li>Logo design & variations</li>
+            <li>Color palette & typography</li>
+            <li>Brand guidelines documentation</li>
+            <li>Asset creation & refinement</li>
+          </ul>
+        </div>
+
+        <div class="stage-card stage-4">
+          <div class="stage-number">04</div>
+          <h3>Application & Testing</h3>
+          <p>Theory meets reality. We apply your brand across real-world applications—website mockups, marketing collateral, packaging, social media—to ensure it performs beautifully everywhere.</p>
+          <ul class="stage-details">
+            <li>Multi-channel mockups</li>
+            <li>Real-world application testing</li>
+            <li>Brand consistency checks</li>
+            <li>Revisions & optimization</li>
+          </ul>
+        </div>
+
+        <div class="stage-card stage-5">
+          <div class="stage-number">05</div>
+          <h3>Launch & Support</h3>
+          <p>Your brand enters the world. We provide final deliverables, brand guidelines, and ongoing support to ensure a smooth transition and successful implementation across all platforms.</p>
+          <ul class="stage-details">
+            <li>Final deliverable handoff</li>
+            <li>Comprehensive brand guidelines</li>
+            <li>Implementation support</li>
+            <li>Post-launch consultation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-collaboration">
+    <div class="container">
+      <h2>Collaboration Throughout</h2>
+      <div class="collab-content">
+        <div class="collab-text">
+          <p>We're allergic to "client vs. agency" dynamics. Throughout every stage, you're an active partner in the creative process. Regular check-ins, transparent feedback loops, and shared decision-making ensure the final brand feels like <em>your</em> brand.</p>
+          <p>We believe the best work happens when there's genuine partnership—when you trust our expertise and we respect your vision. That's where the magic happens.</p>
+        </div>
+        <div class="collab-highlight">
+          <blockquote>"Design is not just what it looks like and feels like. Design is how it works."</blockquote>
+          <p class="quote-attr">— Steve Jobs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-timeline">
+    <div class="container">
+      <h2>Timeline & Investment</h2>
+      <div class="timeline-info">
+        <div class="timeline-item">
+          <h4>Project Duration</h4>
+          <p>Most projects take 8–12 weeks, depending on scope and complexity. We move at the pace of good thinking, not the speed of rush.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Discovery Phase</h4>
+          <p>Weeks 1–2: We learn your story, market, and vision through deep conversations and research.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Creative Development</h4>
+          <p>Weeks 3–6: Concepting, exploration, direction selection, and refinement happen here.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Design Refinement</h4>
+          <p>Weeks 7–10: Detailed design work, applications, and testing across touchpoints.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Launch Prep</h4>
+          <p>Weeks 11–12: Final deliverables, guidelines, and handoff support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-cta">
+    <div class="container">
+      <h2>Ready to Grow Your Brand?</h2>
+      <p>Let's start a conversation about your vision and bring it to life through thoughtful, bold design.</p>
+      <a href="/wildflower-main/contact" class="cta-button">Get in Touch</a>
+    </div>
+  </section>
+</main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Wildflower Studio</h4>
+        <p>Bold, human-centered brand design for conscious businesses.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="/wildflower-main/work">Work</a></li>
+          <li><a href="/wildflower-main/process">Process</a></li>
+          <li><a href="/wildflower-main/services">Services</a></li>
+          <li><a href="/wildflower-main/journal">Journal</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/wildflower-main/about">About</a></li>
+          <li><a href="/wildflower-main/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Wildflower Studio. All rights reserved.</p>
+    </div>
+  </div>
+</footer></body></html>
