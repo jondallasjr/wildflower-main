@@ -11,9 +11,9 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
   color: #1a1a1a;
-  background: #ffffff;
+  background: white;
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,25 +22,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #d4644f;
+  color: #d4845c;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #c84d3f;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  color: #c0723f;
 }
 
 /* Header Styles */
 .site-header {
   background: white;
-  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -49,23 +43,22 @@ img {
 .header-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1.5rem 2rem;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: 700;
   color: #1a1a1a;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
 
 .logo-text {
-  background: linear-gradient(135deg, #d4644f 0%, #c84d3f 100%);
+  background: linear-gradient(135deg, #d4845c 0%, #c8d5b7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -77,90 +70,103 @@ img {
   background: none;
   border: none;
   cursor: pointer;
-  gap: 5px;
+  gap: 6px;
+  padding: 8px;
 }
 
 .nav-toggle span {
-  width: 25px;
-  height: 3px;
+  width: 24px;
+  height: 2px;
   background: #1a1a1a;
+  border-radius: 2px;
   transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
 }
 
 /* Navigation Styles */
 .site-nav {
-  display: flex;
-  justify-content: center;
   background: white;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-.site-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 0;
+.nav-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
-  flex-wrap: wrap;
+  padding: 0 40px;
 }
 
-.site-nav li {
-  flex: 0 1 auto;
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+  height: 60px;
 }
 
-.site-nav a {
-  display: block;
-  padding: 1rem 1.5rem;
-  font-weight: 500;
-  font-size: 0.95rem;
+.nav-list a {
+  font-size: 15px;
+  font-weight: 600;
   color: #1a1a1a;
   position: relative;
+  transition: color 0.3s ease;
 }
 
-.site-nav a::after {
+.nav-list a::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 1.5rem;
-  right: 1.5rem;
+  bottom: -4px;
+  left: 0;
+  width: 0;
   height: 2px;
-  background: #d4644f;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  background: #d4845c;
+  transition: width 0.3s ease;
 }
 
-.site-nav a:hover::after {
-  transform: scaleX(1);
+.nav-list a:hover::after {
+  width: 100%;
 }
 
 /* Footer Styles */
 .site-footer {
   background: #1a1a1a;
-  color: white;
-  padding: 4rem 2rem 2rem;
-  margin-top: 4rem;
+  color: #e0e0e0;
+  padding: 60px 40px 20px;
+  margin-top: 100px;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .footer-content {
-  max-width: 1400px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
-  margin-bottom: 2rem;
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
-.footer-section h3,
 .footer-section h4 {
-  margin-bottom: 1rem;
+  font-size: 16px;
+  margin-bottom: 16px;
   color: white;
 }
 
 .footer-section p {
-  font-size: 0.95rem;
+  font-size: 14px;
   line-height: 1.6;
-  opacity: 0.8;
+  color: #999;
 }
 
 .footer-section ul {
@@ -168,36 +174,31 @@ img {
 }
 
 .footer-section ul li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 12px;
 }
 
-.footer-section a {
-  color: #aaa;
-  font-size: 0.95rem;
+.footer-section ul li a {
+  font-size: 14px;
+  color: #999;
+  transition: color 0.3s ease;
 }
 
-.footer-section a:hover {
-  color: #d4644f;
+.footer-section ul li a:hover {
+  color: #d4845c;
 }
 
 .footer-bottom {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding-top: 2rem;
   border-top: 1px solid #333;
+  padding-top: 20px;
   text-align: center;
-  opacity: 0.6;
-  font-size: 0.9rem;
+  font-size: 13px;
+  color: #666;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .header-container {
-    padding: 1rem 1.5rem;
-  }
-
-  .logo {
-    font-size: 1.25rem;
+    padding: 16px 24px;
   }
 
   .nav-toggle {
@@ -205,167 +206,186 @@ img {
   }
 
   .site-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    border-bottom: 1px solid #eee;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+    border-bottom: none;
   }
 
   .site-nav.active {
-    max-height: 500px;
+    max-height: 300px;
+    border-bottom: 1px solid #f0f0f0;
   }
 
-  .site-nav ul {
+  .nav-container {
+    padding: 20px 24px;
+  }
+
+  .nav-list {
     flex-direction: column;
-    padding: 0;
-  }
-
-  .site-nav li {
-    flex: 1 1 100%;
-  }
-
-  .site-nav a {
-    padding: 0.875rem 1.5rem;
-    border-bottom: 1px solid #eee;
-  }
-
-  .site-nav a::after {
-    left: 0;
-    right: 0;
-    width: 3px;
+    gap: 16px;
     height: auto;
-    top: 0;
-    bottom: 0;
-    transform: scaleY(0);
   }
 
-  .site-nav a:hover::after {
-    transform: scaleY(1);
+  .nav-list a::after {
+    display: none;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 12px 16px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .nav-container {
+    padding: 16px;
+  }
+
+  .site-footer {
+    padding: 40px 16px 16px;
   }
 }
 /* Wildflower Studio — Brand Design for Conscious Businesses - Page CSS */
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  padding: 6rem 2rem;
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 40px;
   overflow: hidden;
+  background: linear-gradient(135deg, #fef9f5 0%, #fef3e6 100%);
 }
 
 .hero-content {
+  flex: 1;
+  max-width: 600px;
   z-index: 2;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 64px;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  margin-bottom: 24px;
   color: #1a1a1a;
   letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 18px;
   line-height: 1.6;
   color: #555;
-  margin-bottom: 2rem;
-  max-width: 500px;
+  margin-bottom: 40px;
+  max-width: 520px;
 }
 
 .hero-cta {
   display: flex;
-  gap: 1rem;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .btn {
-  padding: 0.875rem 1.75rem;
-  border-radius: 0.5rem;
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-  display: inline-block;
   transition: all 0.3s ease;
+  cursor: pointer;
   border: 2px solid;
-  font-size: 1rem;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #d4644f 0%, #c84d3f 100%);
+  background: #d4845c;
   color: white;
-  border-color: #d4644f;
+  border-color: #d4845c;
 }
 
 .btn-primary:hover {
+  background: #c0723f;
+  border-color: #c0723f;
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(212, 100, 79, 0.3);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #1a1a1a;
-  border-color: #1a1a1a;
+  color: #d4845c;
+  border-color: #d4845c;
 }
 
 .btn-secondary:hover {
-  background: #1a1a1a;
+  background: #d4845c;
   color: white;
+  transform: translateY(-2px);
 }
 
 .btn-large {
-  padding: 1rem 2.5rem;
-  font-size: 1.125rem;
+  padding: 16px 40px;
+  font-size: 18px;
 }
 
 .hero-visual {
+  flex: 1;
   position: relative;
   height: 500px;
+  margin-left: 60px;
 }
 
 .hero-accent {
   position: absolute;
   border-radius: 50%;
   opacity: 0.8;
-  animation: float 6s ease-in-out infinite;
 }
 
 .hero-accent-1 {
   width: 280px;
   height: 280px;
-  background: linear-gradient(135deg, #f4e4b6 0%, #f9d5a1 100%);
-  top: 20px;
-  right: 40px;
-  animation-delay: 0s;
+  background: #f4b5a0;
+  top: 40px;
+  right: 0;
+  animation: float 6s ease-in-out infinite;
 }
 
 .hero-accent-2 {
-  width: 180px;
-  height: 180px;
-  background: linear-gradient(135deg, #d4e8f0 0%, #a8d5e8 100%);
-  bottom: 60px;
-  right: 200px;
-  animation-delay: 2s;
+  width: 220px;
+  height: 220px;
+  background: #c8d5b7;
+  bottom: 80px;
+  right: 140px;
+  animation: float 8s ease-in-out infinite 1s;
 }
 
 .hero-accent-3 {
-  width: 120px;
-  height: 120px;
-  background: linear-gradient(135deg, #f4d4e8 0%, #f0a8d5 100%);
-  bottom: 100px;
-  right: 80px;
-  animation-delay: 4s;
+  width: 180px;
+  height: 180px;
+  background: #e8c4d8;
+  bottom: 20px;
+  right: 280px;
+  animation: float 7s ease-in-out infinite 0.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes float {
@@ -378,13 +398,19 @@ img {
 }
 
 .principles {
-  padding: 5rem 2rem;
-  background: #fafafa;
+  padding: 100px 40px;
+  background: white;
 }
 
-.principles h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+.principles-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.principles-container h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 60px;
   text-align: center;
   color: #1a1a1a;
 }
@@ -392,242 +418,330 @@ img {
 .principles-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 40px;
 }
 
-.principle-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 0.75rem;
-  border-left: 4px solid #d4644f;
+.principle {
+  padding: 32px;
+  background: #faf8f6;
+  border-radius: 8px;
+  border-left: 4px solid #d4845c;
   transition: all 0.3s ease;
 }
 
-.principle-card:hover {
+.principle:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
-.principle-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
+.principle h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
   color: #1a1a1a;
 }
 
-.principle-card p {
-  font-size: 1rem;
+.principle p {
+  font-size: 16px;
   line-height: 1.6;
   color: #666;
 }
 
 .testimonials {
-  padding: 5rem 2rem;
+  padding: 100px 40px;
+  background: linear-gradient(135deg, #f5f0e8 0%, #ede6dd 100%);
 }
 
-.testimonials h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonials-container h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 60px;
   text-align: center;
   color: #1a1a1a;
 }
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
 }
 
 .testimonial {
-  background: linear-gradient(135deg, #f9f5f0 0%, #f5f0fa 100%);
-  padding: 2rem;
-  border-radius: 0.75rem;
-  border: 1px solid rgba(212, 100, 79, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background: white;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
 }
 
-.testimonial p {
-  font-size: 1.125rem;
+.testimonial:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+  font-size: 17px;
   line-height: 1.7;
-  color: #2a2a2a;
-  margin-bottom: 1.5rem;
+  color: #333;
+  margin-bottom: 16px;
   font-style: italic;
 }
 
-.testimonial footer {
-  font-size: 0.95rem;
-  color: #666;
+.testimonial-credit {
+  font-size: 14px;
+  color: #888;
   font-weight: 600;
 }
 
 .cta-section {
-  background: linear-gradient(135deg, #d4644f 0%, #c84d3f 100%);
-  padding: 4rem 2rem;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #d4845c 0%, #c0723f 100%);
   text-align: center;
   color: white;
 }
 
-.cta-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.cta-container {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.cta-content p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+.cta-container h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.cta-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
   opacity: 0.95;
+}
+
+.cta-section .btn-primary {
+  background: white;
+  color: #d4845c;
+  border-color: white;
+}
+
+.cta-section .btn-primary:hover {
+  background: #f0f0f0;
+  border-color: #f0f0f0;
 }
 
 @media (max-width: 768px) {
   .hero {
-    grid-template-columns: 1fr;
-    padding: 3rem 1.5rem;
+    flex-direction: column;
+    padding: 60px 24px;
+    min-height: auto;
   }
 
   .hero-title {
-    font-size: 2.25rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
+    font-size: 42px;
   }
 
   .hero-visual {
-    height: 300px;
+    margin-left: 0;
+    margin-top: 60px;
+    height: 350px;
   }
 
   .hero-accent-1 {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
   }
 
-  .principles h2,
-  .testimonials h2,
-  .cta-content h2 {
-    font-size: 2rem;
+  .hero-accent-2 {
+    width: 160px;
+    height: 160px;
+  }
+
+  .hero-accent-3 {
+    width: 130px;
+    height: 130px;
+  }
+
+  .principles-container h2,
+  .testimonials-container h2,
+  .cta-container h2 {
+    font-size: 36px;
   }
 
   .principles-grid,
   .testimonials-grid {
-    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .principles,
+  .testimonials,
+  .cta-section {
+    padding: 60px 16px;
+  }
+
+  .principle,
+  .testimonial {
+    padding: 20px;
   }
 }.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  padding: 6rem 2rem;
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 40px;
   overflow: hidden;
+  background: linear-gradient(135deg, #fef9f5 0%, #fef3e6 100%);
 }
 
 .hero-content {
+  flex: 1;
+  max-width: 600px;
   z-index: 2;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 64px;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  margin-bottom: 24px;
   color: #1a1a1a;
   letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 18px;
   line-height: 1.6;
   color: #555;
-  margin-bottom: 2rem;
-  max-width: 500px;
+  margin-bottom: 40px;
+  max-width: 520px;
 }
 
 .hero-cta {
   display: flex;
-  gap: 1rem;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .btn {
-  padding: 0.875rem 1.75rem;
-  border-radius: 0.5rem;
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-  display: inline-block;
   transition: all 0.3s ease;
+  cursor: pointer;
   border: 2px solid;
-  font-size: 1rem;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #d4644f 0%, #c84d3f 100%);
+  background: #d4845c;
   color: white;
-  border-color: #d4644f;
+  border-color: #d4845c;
 }
 
 .btn-primary:hover {
+  background: #c0723f;
+  border-color: #c0723f;
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(212, 100, 79, 0.3);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #1a1a1a;
-  border-color: #1a1a1a;
+  color: #d4845c;
+  border-color: #d4845c;
 }
 
 .btn-secondary:hover {
-  background: #1a1a1a;
+  background: #d4845c;
   color: white;
+  transform: translateY(-2px);
 }
 
 .btn-large {
-  padding: 1rem 2.5rem;
-  font-size: 1.125rem;
+  padding: 16px 40px;
+  font-size: 18px;
 }
 
 .hero-visual {
+  flex: 1;
   position: relative;
   height: 500px;
+  margin-left: 60px;
 }
 
 .hero-accent {
   position: absolute;
   border-radius: 50%;
   opacity: 0.8;
-  animation: float 6s ease-in-out infinite;
 }
 
 .hero-accent-1 {
   width: 280px;
   height: 280px;
-  background: linear-gradient(135deg, #f4e4b6 0%, #f9d5a1 100%);
-  top: 20px;
-  right: 40px;
-  animation-delay: 0s;
+  background: #f4b5a0;
+  top: 40px;
+  right: 0;
+  animation: float 6s ease-in-out infinite;
 }
 
 .hero-accent-2 {
-  width: 180px;
-  height: 180px;
-  background: linear-gradient(135deg, #d4e8f0 0%, #a8d5e8 100%);
-  bottom: 60px;
-  right: 200px;
-  animation-delay: 2s;
+  width: 220px;
+  height: 220px;
+  background: #c8d5b7;
+  bottom: 80px;
+  right: 140px;
+  animation: float 8s ease-in-out infinite 1s;
 }
 
 .hero-accent-3 {
-  width: 120px;
-  height: 120px;
-  background: linear-gradient(135deg, #f4d4e8 0%, #f0a8d5 100%);
-  bottom: 100px;
-  right: 80px;
-  animation-delay: 4s;
+  width: 180px;
+  height: 180px;
+  background: #e8c4d8;
+  bottom: 20px;
+  right: 280px;
+  animation: float 7s ease-in-out infinite 0.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes float {
@@ -640,13 +754,19 @@ img {
 }
 
 .principles {
-  padding: 5rem 2rem;
-  background: #fafafa;
+  padding: 100px 40px;
+  background: white;
 }
 
-.principles h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+.principles-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.principles-container h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 60px;
   text-align: center;
   color: #1a1a1a;
 }
@@ -654,161 +774,233 @@ img {
 .principles-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 40px;
 }
 
-.principle-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 0.75rem;
-  border-left: 4px solid #d4644f;
+.principle {
+  padding: 32px;
+  background: #faf8f6;
+  border-radius: 8px;
+  border-left: 4px solid #d4845c;
   transition: all 0.3s ease;
 }
 
-.principle-card:hover {
+.principle:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
-.principle-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
+.principle h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
   color: #1a1a1a;
 }
 
-.principle-card p {
-  font-size: 1rem;
+.principle p {
+  font-size: 16px;
   line-height: 1.6;
   color: #666;
 }
 
 .testimonials {
-  padding: 5rem 2rem;
+  padding: 100px 40px;
+  background: linear-gradient(135deg, #f5f0e8 0%, #ede6dd 100%);
 }
 
-.testimonials h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonials-container h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 60px;
   text-align: center;
   color: #1a1a1a;
 }
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
 }
 
 .testimonial {
-  background: linear-gradient(135deg, #f9f5f0 0%, #f5f0fa 100%);
-  padding: 2rem;
-  border-radius: 0.75rem;
-  border: 1px solid rgba(212, 100, 79, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background: white;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
 }
 
-.testimonial p {
-  font-size: 1.125rem;
+.testimonial:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+  font-size: 17px;
   line-height: 1.7;
-  color: #2a2a2a;
-  margin-bottom: 1.5rem;
+  color: #333;
+  margin-bottom: 16px;
   font-style: italic;
 }
 
-.testimonial footer {
-  font-size: 0.95rem;
-  color: #666;
+.testimonial-credit {
+  font-size: 14px;
+  color: #888;
   font-weight: 600;
 }
 
 .cta-section {
-  background: linear-gradient(135deg, #d4644f 0%, #c84d3f 100%);
-  padding: 4rem 2rem;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #d4845c 0%, #c0723f 100%);
   text-align: center;
   color: white;
 }
 
-.cta-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.cta-container {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.cta-content p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+.cta-container h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.cta-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
   opacity: 0.95;
+}
+
+.cta-section .btn-primary {
+  background: white;
+  color: #d4845c;
+  border-color: white;
+}
+
+.cta-section .btn-primary:hover {
+  background: #f0f0f0;
+  border-color: #f0f0f0;
 }
 
 @media (max-width: 768px) {
   .hero {
-    grid-template-columns: 1fr;
-    padding: 3rem 1.5rem;
+    flex-direction: column;
+    padding: 60px 24px;
+    min-height: auto;
   }
 
   .hero-title {
-    font-size: 2.25rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
+    font-size: 42px;
   }
 
   .hero-visual {
-    height: 300px;
+    margin-left: 0;
+    margin-top: 60px;
+    height: 350px;
   }
 
   .hero-accent-1 {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
   }
 
-  .principles h2,
-  .testimonials h2,
-  .cta-content h2 {
-    font-size: 2rem;
+  .hero-accent-2 {
+    width: 160px;
+    height: 160px;
+  }
+
+  .hero-accent-3 {
+    width: 130px;
+    height: 130px;
+  }
+
+  .principles-container h2,
+  .testimonials-container h2,
+  .cta-container h2 {
+    font-size: 36px;
   }
 
   .principles-grid,
   .testimonials-grid {
-    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .principles,
+  .testimonials,
+  .cta-section {
+    padding: 60px 16px;
+  }
+
+  .principle,
+  .testimonial {
+    padding: 20px;
   }
 }</style></head><body><header class="site-header">
   <div class="header-container">
     <a href="/wildflower-main/" class="logo">
       <span class="logo-text">Wildflower Studio</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
       <span></span>
       <span></span>
       <span></span>
     </button>
   </div>
-</header>
-<script>
-  document.querySelector('.nav-toggle').addEventListener('click', function() {
-    document.querySelector('.site-nav').classList.toggle('active');
-    this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
-  });
-</script><nav class="site-nav">
-  <ul>
-    <li><a href="/wildflower-main/">Home</a></li>
-    <li><a href="/wildflower-main/work">Work</a></li>
-    <li><a href="/wildflower-main/process">Process</a></li>
-    <li><a href="/wildflower-main/services">Services</a></li>
-    <li><a href="/wildflower-main/journal">Journal</a></li>
-    <li><a href="/wildflower-main/about">About</a></li>
-    <li><a href="/wildflower-main/contact">Contact</a></li>
-  </ul>
+</header><nav class="site-nav" id="siteNav">
+  <div class="nav-container">
+    <ul class="nav-list">
+      <li><a href="/wildflower-main/work">Work</a></li>
+      <li><a href="/wildflower-main/process">Process</a></li>
+      <li><a href="/wildflower-main/services">Services</a></li>
+      <li><a href="/wildflower-main/journal">Journal</a></li>
+      <li><a href="/wildflower-main/about">About</a></li>
+      <li><a href="/wildflower-main/contact">Contact</a></li>
+    </ul>
+  </div>
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    navToggle.addEventListener('click', function() {
+      siteNav.classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
 </nav><section class="hero">
   <div class="hero-content">
     <h1 class="hero-title">Brand Design for Conscious Businesses</h1>
-    <p class="hero-subtitle">We help startups, nonprofits, and purpose-driven brands bloom. Bold design. Human-centered. Unapologetically creative.</p>
+    <p class="hero-subtitle">We create bold, human-centered identities for startups, nonprofits, and purpose-driven brands that refuse to blend in.</p>
     <div class="hero-cta">
       <a href="/wildflower-main/work" class="btn btn-primary">See Our Work</a>
       <a href="/wildflower-main/process" class="btn btn-secondary">Our Process</a>
@@ -822,79 +1014,85 @@ img {
 </section>
 
 <section class="principles">
-  <h2>How We Work</h2>
-  <div class="principles-grid">
-    <div class="principle-card">
-      <h3>Human-Centered Always</h3>
-      <p>Design serves people, not egos. We create for real humans with real needs.</p>
-    </div>
-    <div class="principle-card">
-      <h3>Bold Over Safe</h3>
-      <p>We encourage clients to take creative risks. Playing it safe means blending in.</p>
-    </div>
-    <div class="principle-card">
-      <h3>Collaboration is Key</h3>
-      <p>Our best work happens in partnership. We're allergic to "client vs. agency" dynamics.</p>
-    </div>
-    <div class="principle-card">
-      <h3>Purpose Matters</h3>
-      <p>We work exclusively with mission-driven organizations. If you're only here for profit, we're not your studio.</p>
-    </div>
-    <div class="principle-card">
-      <h3>Process Over Perfection</h3>
-      <p>Creative exploration is messy. We embrace it. Iteration reveals brilliance.</p>
+  <div class="principles-container">
+    <h2>How We Work</h2>
+    <div class="principles-grid">
+      <div class="principle">
+        <h3>Human-Centered Always</h3>
+        <p>Design serves people, not egos. We create for real humans with real needs.</p>
+      </div>
+      <div class="principle">
+        <h3>Bold Over Safe</h3>
+        <p>We encourage clients to take creative risks. Playing it safe means blending in.</p>
+      </div>
+      <div class="principle">
+        <h3>Collaboration is Key</h3>
+        <p>Our best work happens in partnership. We're allergic to "client vs. agency" dynamics.</p>
+      </div>
+      <div class="principle">
+        <h3>Purpose Matters</h3>
+        <p>We work exclusively with mission-driven organizations. If you're only here for profit, we're not your studio.</p>
+      </div>
+      <div class="principle">
+        <h3>Process Over Perfection</h3>
+        <p>Creative exploration is messy. We embrace it. Iteration reveals brilliance.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="testimonials">
-  <h2>What Our Clients Say</h2>
-  <div class="testimonials-grid">
-    <blockquote class="testimonial">
-      <p>"Wildflower transformed our brand from 'fine' to 'unforgettable.' They captured our mission better than we could articulate it ourselves."</p>
-      <footer>— Sarah Chen, Founder, Moonlight Wellness</footer>
-    </blockquote>
-    <blockquote class="testimonial">
-      <p>"Working with this team felt like having creative partners, not vendors. They challenged us in the best ways."</p>
-      <footer>— Marcus Johnson, CEO, Bright Future Initiative</footer>
-    </blockquote>
-    <blockquote class="testimonial">
-      <p>"Bold, thoughtful, and refreshingly human. The opposite of every design agency we'd worked with before."</p>
-      <footer>— Patricia Okonkwo, Director, Green Cities Alliance</footer>
-    </blockquote>
+  <div class="testimonials-container">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <p class="testimonial-text">"Wildflower transformed our brand from 'fine' to 'unforgettable.' They captured our mission better than we could articulate it ourselves."</p>
+        <p class="testimonial-credit">— Sarah Chen, Founder, Moonlight Wellness</p>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">"Working with this team felt like having creative partners, not vendors. They challenged us in the best ways."</p>
+        <p class="testimonial-credit">— Marcus Johnson, CEO, Bright Future Initiative</p>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">"Bold, thoughtful, and refreshingly human. The opposite of every design agency we'd worked with before."</p>
+        <p class="testimonial-credit">— Patricia Okonkwo, Director, Green Cities Alliance</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="cta-section">
-  <div class="cta-content">
-    <h2>Ready to Bloom?</h2>
-    <p>Let's talk about your brand story. We're here to help you grow into something unforgettable.</p>
+  <div class="cta-container">
+    <h2>Ready to Grow Your Brand?</h2>
+    <p>Let's create something bold, authentic, and unforgettable together.</p>
     <a href="/wildflower-main/contact" class="btn btn-primary btn-large">Start a Conversation</a>
   </div>
 </section><footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-section">
-      <h3>Wildflower Studio</h3>
-      <p>Brand design for conscious businesses. Human-centered. Bold. Collaborative.</p>
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Wildflower Studio</h4>
+        <p>Bold, human-centered brand design for conscious businesses.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="/wildflower-main/work">Work</a></li>
+          <li><a href="/wildflower-main/process">Process</a></li>
+          <li><a href="/wildflower-main/services">Services</a></li>
+          <li><a href="/wildflower-main/journal">Journal</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/wildflower-main/about">About</a></li>
+          <li><a href="/wildflower-main/contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-section">
-      <h4>Pages</h4>
-      <ul>
-        <li><a href="/wildflower-main/work">Work</a></li>
-        <li><a href="/wildflower-main/process">Process</a></li>
-        <li><a href="/wildflower-main/services">Services</a></li>
-        <li><a href="/wildflower-main/journal">Journal</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Wildflower Studio. All rights reserved.</p>
     </div>
-    <div class="footer-section">
-      <h4>Connect</h4>
-      <ul>
-        <li><a href="/wildflower-main/contact">Get in Touch</a></li>
-        <li><a href="/wildflower-main/about">About Us</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 Wildflower Studio. All rights reserved.</p>
   </div>
 </footer></body></html>
