@@ -1,0 +1,992 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Get In Touch — Start Your Brand Project</title><style>/* Global CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #1a1a1a;
+  background: white;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: #d4845c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #c0723f;
+}
+
+/* Header Styles */
+.site-header {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  background: linear-gradient(135deg, #d4845c 0%, #c8d5b7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 6px;
+  padding: 8px;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: #1a1a1a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Navigation Styles */
+.site-nav {
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+  height: 60px;
+}
+
+.nav-list a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #d4845c;
+  transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after {
+  width: 100%;
+}
+
+/* Footer Styles */
+.site-footer {
+  background: #1a1a1a;
+  color: #e0e0e0;
+  padding: 60px 40px 20px;
+  margin-top: 100px;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #999;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  font-size: 14px;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #d4845c;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 16px 24px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-bottom: none;
+  }
+
+  .site-nav.active {
+    max-height: 300px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-container {
+    padding: 20px 24px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 16px;
+    height: auto;
+  }
+
+  .nav-list a::after {
+    display: none;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 12px 16px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .nav-container {
+    padding: 16px;
+  }
+
+  .site-footer {
+    padding: 40px 16px 16px;
+  }
+}
+/* Get In Touch — Start Your Brand Project - Page CSS */
+.contact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.contact-hero {
+  padding: 80px 0 60px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #d4845c 0%, #c8d5b7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contact-content {
+  padding: 80px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-form-section h2 {
+  font-size: 32px;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 16px;
+  font-size: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  color: #1a1a1a;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #d4845c;
+  box-shadow: 0 0 0 3px rgba(212, 132, 92, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #d4845c 0%, #c8d5b7 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 132, 92, 0.3);
+}
+
+.form-note {
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+}
+
+.contact-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.info-block {
+  padding: 24px;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.info-block h3 {
+  font-size: 18px;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.info-block p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+.info-block p:last-child {
+  margin-bottom: 0;
+}
+
+.info-closed {
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #d4845c;
+}
+
+.map-link:hover {
+  color: #c0723f;
+}
+
+.contact-methods {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.contact-methods li {
+  margin-bottom: 12px;
+}
+
+.contact-methods li a {
+  font-size: 15px;
+  color: #d4845c;
+  font-weight: 600;
+}
+
+.contact-methods li a:hover {
+  color: #c0723f;
+}
+
+.contact-note {
+  font-size: 13px;
+  color: #999;
+  margin-top: 12px;
+}
+
+.info-block.highlight {
+  background: linear-gradient(135deg, rgba(212, 132, 92, 0.08) 0%, rgba(200, 213, 183, 0.08) 100%);
+  border-color: #d4845c;
+}
+
+.info-block.highlight h3 {
+  color: #d4845c;
+}
+
+.info-block.highlight p {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .contact-container {
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 60px 0 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .contact-content {
+    padding: 60px 0;
+  }
+
+  .contact-grid {
+    gap: 40px;
+  }
+
+  .contact-form-section h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .contact-info-section {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 0 16px;
+  }
+
+  .contact-hero {
+    padding: 40px 0 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
+  .contact-content {
+    padding: 40px 0;
+  }
+
+  .contact-form-section h2 {
+    font-size: 24px;
+  }
+
+  .form-group {
+    gap: 6px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .info-block {
+    padding: 20px;
+  }
+
+  .info-block h3 {
+    font-size: 16px;
+  }
+}.contact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.contact-hero {
+  padding: 80px 0 60px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #d4845c 0%, #c8d5b7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contact-content {
+  padding: 80px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-form-section h2 {
+  font-size: 32px;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 16px;
+  font-size: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  color: #1a1a1a;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #d4845c;
+  box-shadow: 0 0 0 3px rgba(212, 132, 92, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #d4845c 0%, #c8d5b7 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 132, 92, 0.3);
+}
+
+.form-note {
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+}
+
+.contact-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.info-block {
+  padding: 24px;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.info-block h3 {
+  font-size: 18px;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.info-block p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+.info-block p:last-child {
+  margin-bottom: 0;
+}
+
+.info-closed {
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #d4845c;
+}
+
+.map-link:hover {
+  color: #c0723f;
+}
+
+.contact-methods {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.contact-methods li {
+  margin-bottom: 12px;
+}
+
+.contact-methods li a {
+  font-size: 15px;
+  color: #d4845c;
+  font-weight: 600;
+}
+
+.contact-methods li a:hover {
+  color: #c0723f;
+}
+
+.contact-note {
+  font-size: 13px;
+  color: #999;
+  margin-top: 12px;
+}
+
+.info-block.highlight {
+  background: linear-gradient(135deg, rgba(212, 132, 92, 0.08) 0%, rgba(200, 213, 183, 0.08) 100%);
+  border-color: #d4845c;
+}
+
+.info-block.highlight h3 {
+  color: #d4845c;
+}
+
+.info-block.highlight p {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .contact-container {
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 60px 0 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .contact-content {
+    padding: 60px 0;
+  }
+
+  .contact-grid {
+    gap: 40px;
+  }
+
+  .contact-form-section h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .contact-info-section {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 0 16px;
+  }
+
+  .contact-hero {
+    padding: 40px 0 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
+  .contact-content {
+    padding: 40px 0;
+  }
+
+  .contact-form-section h2 {
+    font-size: 24px;
+  }
+
+  .form-group {
+    gap: 6px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .info-block {
+    padding: 20px;
+  }
+
+  .info-block h3 {
+    font-size: 16px;
+  }
+}</style></head><body><header class="site-header">
+  <div class="header-container">
+    <a href="/wildflower-main/" class="logo">
+      <span class="logo-text">Wildflower Studio</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header><nav class="site-nav" id="siteNav">
+  <div class="nav-container">
+    <ul class="nav-list">
+      <li><a href="/wildflower-main/work">Work</a></li>
+      <li><a href="/wildflower-main/process">Process</a></li>
+      <li><a href="/wildflower-main/services">Services</a></li>
+      <li><a href="/wildflower-main/journal">Journal</a></li>
+      <li><a href="/wildflower-main/about">About</a></li>
+      <li><a href="/wildflower-main/contact">Contact</a></li>
+    </ul>
+  </div>
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    navToggle.addEventListener('click', function() {
+      siteNav.classList.toggle('active');
+      this.classList.toggle('active');
+    });
+  </script>
+</nav><main class="contact-container">
+  <section class="contact-hero">
+    <div class="hero-content">
+      <h1>Get In Touch</h1>
+      <p class="hero-subtitle">Let's start your brand project. We'd love to hear about your vision.</p>
+    </div>
+  </section>
+
+  <section class="contact-content">
+    <div class="contact-grid">
+      <div class="contact-form-section">
+        <h2>Send us a message</h2>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Company / Project Name</label>
+            <input type="text" id="company" name="company">
+          </div>
+          <div class="form-group">
+            <label for="service">What service are you interested in?</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option value="brand-identity">Brand Identity</option>
+              <option value="brand-strategy">Brand Strategy</option>
+              <option value="visual-design">Visual Design</option>
+              <option value="packaging">Packaging Design</option>
+              <option value="web-design">Web Design</option>
+              <option value="other">Other / Not Sure Yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your project</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-note">We typically respond within 2 business days.</p>
+        </form>
+      </div>
+
+      <div class="contact-info-section">
+        <div class="info-block">
+          <h3>Studio Hours</h3>
+          <p>Tuesday–Friday<br>10am–5pm PT</p>
+          <p class="info-closed">Closed Saturday–Monday</p>
+        </div>
+
+        <div class="info-block">
+          <h3>Location</h3>
+          <p>421 SE Hawthorne Blvd<br>Portland, OR 97214</p>
+          <a href="https://maps.google.com/?q=421+SE+Hawthorne+Blvd+Portland+OR+97214" target="_blank" class="map-link">View on Map →</a>
+        </div>
+
+        <div class="info-block">
+          <h3>Get In Touch</h3>
+          <ul class="contact-methods">
+            <li><a href="mailto:hello@wildflowerstudio.design">hello@wildflowerstudio.design</a></li>
+            <li><a href="tel:+15035551234">(503) 555-1234</a></li>
+            <li><a href="https://instagram.com/wildflowerstudio" target="_blank">@wildflowerstudio on Instagram</a></li>
+          </ul>
+          <p class="contact-note">We actively monitor our Instagram DMs too.</p>
+        </div>
+
+        <div class="info-block highlight">
+          <h3>Ready to work with us?</h3>
+          <p>We're looking for conscious brands that are bold, authentic, and ready to make an impact. If that's you, let's talk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Wildflower Studio</h4>
+        <p>Bold, human-centered brand design for conscious businesses.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="/wildflower-main/work">Work</a></li>
+          <li><a href="/wildflower-main/process">Process</a></li>
+          <li><a href="/wildflower-main/services">Services</a></li>
+          <li><a href="/wildflower-main/journal">Journal</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="/wildflower-main/about">About</a></li>
+          <li><a href="/wildflower-main/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Wildflower Studio. All rights reserved.</p>
+    </div>
+  </div>
+</footer></body></html>
