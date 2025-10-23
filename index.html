@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Wildflower Studio — Brand Design for Conscious Businesses</title><style>/* Wildflower Studio — Brand Design for Conscious Businesses - Page CSS */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #fef5f1 0%, #f0e8ff 100%);
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #2d1b1b;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #5a4a4a;
+  margin-bottom: 2rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ff6b9d 0%, #f06a7c 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 157, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #2d1b1b;
+  border-color: #2d1b1b;
+}
+
+.btn-secondary:hover {
+  background: #2d1b1b;
+  color: white;
+}
+
+.btn-large {
+  padding: 1.25rem 3rem;
+  font-size: 1.1rem;
+}
+
+.hero-visual {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500"><circle cx="200" cy="150" r="80" fill="%23ff6b9d" opacity="0.8"/><circle cx="150" cy="300" r="60" fill="%23ffd89b" opacity="0.7"/><circle cx="280" cy="350" r="70" fill="%23a8d8ea" opacity="0.6"/><path d="M 200 450 Q 150 350 200 250" stroke="%23558b5b" stroke-width="3" fill="none"/></svg>') center / cover no-repeat;
+  height: 500px;
+  border-radius: 1rem;
+}
+
+.studio-intro {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  background: #faf8f6;
+}
+
+.studio-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #2d1b1b;
+}
+
+.studio-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #5a4a4a;
+  margin-bottom: 1.25rem;
+}
+
+.principles {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.principles h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2d1b1b;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.principle-card {
+  padding: 2rem;
+  background: #fef5f1;
+  border-radius: 0.75rem;
+  border-left: 4px solid #ff6b9d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.principle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.principle-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #2d1b1b;
+}
+
+.principle-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #5a4a4a;
+}
+
+.testimonials {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f0e8ff 0%, #fef5f1 100%);
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2d1b1b;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  padding: 2rem;
+  background: white;
+  border-radius: 0.75rem;
+  border-top: 3px solid #ffd89b;
+  font-style: italic;
+  color: #5a4a4a;
+}
+
+.testimonial p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial footer {
+  font-style: normal;
+  font-weight: 600;
+  color: #2d1b1b;
+  font-size: 0.9rem;
+}
+
+.cta-final {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #ff6b9d 0%, #f06a7c 100%);
+  color: white;
+}
+
+.cta-final h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-final p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-final .btn-primary {
+  background: white;
+  color: #ff6b9d;
+}
+
+.cta-final .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-visual {
+    height: 300px;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .studio-intro h2,
+  .principles h2,
+  .testimonials h2,
+  .cta-final h2 {
+    font-size: 1.75rem;
+  }
+  
+  .principles-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}</style></head><body><section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Brand Design for Conscious Businesses</h1>
+    <p class="hero-subtitle">We create bold, human-centered identities for startups, nonprofits, and purpose-driven brands that refuse to blend in.</p>
+    <div class="hero-cta">
+      <a href="/wildflower-main/work" class="btn btn-primary">See Our Work</a>
+      <a href="/wildflower-main/contact" class="btn btn-secondary">Start a Project</a>
+    </div>
+  </div>
+  <div class="hero-visual"></div>
+</section>
+
+<section class="studio-intro">
+  <div class="intro-content">
+    <h2>Welcome to Wildflower Studio</h2>
+    <p>Step into our studio and you're immediately surrounded by color, texture, and possibility. Plants everywhere. Mood boards cover entire walls. Music always playing—sometimes jazz, sometimes Afrobeat, always intentional.</p>
+    <p>We believe design should feel alive, not sterile. Every project is a garden we're cultivating: we plant seeds (research), nurture growth (iteration), and celebrate the bloom (launch).</p>
+  </div>
+</section>
+
+<section class="principles">
+  <h2>How We Work</h2>
+  <div class="principles-grid">
+    <div class="principle-card">
+      <h3>Human-Centered Always</h3>
+      <p>Design serves people, not egos. We create for real humans with real needs.</p>
+    </div>
+    <div class="principle-card">
+      <h3>Bold Over Safe</h3>
+      <p>We encourage clients to take creative risks. Playing it safe means blending in.</p>
+    </div>
+    <div class="principle-card">
+      <h3>Collaboration is Key</h3>
+      <p>Our best work happens in partnership. We're allergic to "client vs. agency" dynamics.</p>
+    </div>
+    <div class="principle-card">
+      <h3>Purpose Matters</h3>
+      <p>We work exclusively with mission-driven organizations. If you're only here for profit, we're not your studio.</p>
+    </div>
+    <div class="principle-card">
+      <h3>Process Over Perfection</h3>
+      <p>Creative exploration is messy. We embrace it. Iteration reveals brilliance.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonials-grid">
+    <blockquote class="testimonial">
+      <p>"Wildflower transformed our brand from 'fine' to 'unforgettable.' They captured our mission better than we could articulate it ourselves."</p>
+      <footer>— Sarah Chen, Founder, Moonlight Wellness</footer>
+    </blockquote>
+    <blockquote class="testimonial">
+      <p>"Working with this team felt like having creative partners, not vendors. They challenged us in the best ways."</p>
+      <footer>— Marcus Johnson, CEO, Bright Future Initiative</footer>
+    </blockquote>
+    <blockquote class="testimonial">
+      <p>"Bold, thoughtful, and refreshingly human. The opposite of every design agency we'd worked with before."</p>
+      <footer>— Patricia Okonkwo, Director, Green Cities Alliance</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="cta-final">
+  <h2>Let's Grow Something Beautiful Together</h2>
+  <p>Ready to create a brand that reflects your mission?</p>
+  <a href="/wildflower-main/contact" class="btn btn-primary btn-large">Start Your Project</a>
+</section></body></html>
